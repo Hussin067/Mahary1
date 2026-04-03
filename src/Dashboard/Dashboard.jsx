@@ -10,6 +10,8 @@ import {
 import SkillBar from "./SkillBar";
 import StatCard from "./StatCard";
 import ActivityCard from "./ActivityCard";
+import { Link } from "react-router-dom";
+
 const Dashboard = ({ userName = "Hassan" }) => {
   return (
     
@@ -59,9 +61,9 @@ const Dashboard = ({ userName = "Hassan" }) => {
           <div className="bg-[#1e293b] rounded-2xl border border-white/5 p-6 shadow-xl">
             <div className="flex justify-between mb-6">
               <h3 className="font-bold text-white text-lg">Recent Skills</h3>
-              <button className="text-blue-400 text-xs font-semibold hover:text-blue-300 transition-colors">
+              <Link to="/skills" className="text-blue-400 text-xs font-semibold hover:text-blue-300 transition-colors">
                 View All
-              </button>
+              </Link>
             </div>
 
             <div className="space-y-5">
@@ -78,9 +80,9 @@ const Dashboard = ({ userName = "Hassan" }) => {
             <h3 className="font-bold dark:text-white text-lg">
               Upcoming Milestones
             </h3>
-            <button className="text-blue-400 text-xs font-semibold hover:text-blue-300 transition-colors">
+            <Link to="/roadmap" className="text-blue-400 text-xs font-semibold hover:text-blue-300 transition-colors">
               View All
-            </button>
+            </Link>
           </div>
 
           <div className="space-y-6">
@@ -105,42 +107,43 @@ const Dashboard = ({ userName = "Hassan" }) => {
             <h3 className="font-bold dark:text-white text-lg">Available Activities & Volunteering</h3>
             <p className="dark:text-gray-400 text-sm">Enhance your profile with these opportunities</p>
           </div>
-          <button className="flex items-center gap-2 dark:bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-200 active:scale-[0.98] transition-all">
+          <Link to="/activities" className="flex items-center gap-2 dark:bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-200 active:scale-[0.98] transition-all">
             View All
-          </button>
+          </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ActivityCard 
-            type="Workshop" 
-            typeColor="bg-blue-500/10 text-blue-400 border border-blue-500/20"
-            capacity="25/50" 
-            icon="💻" 
-            title="Tech Workshop: AI & Machine Learning" 
-            organizer="University" 
-            date="Mar 20, 2026" 
-            location="Computer Science Building, Room 301" 
+            type="High-Profile Event" 
+            typeColor="bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20"
+            capacity="Open" 
+            icon="🎙️" 
+            title="Discussion Session with H.E. Minister of Health" 
+            organizer="King Faisal University" 
+            date="Apr 01, 2026 - 10:00 AM" 
+            location="KFU Main Auditorium" 
+          />
+          <ActivityCard 
+            type="International Conference" 
+            typeColor="bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20"
+            capacity="Limited Seats" 
+            icon="🤖" 
+            title="Int. Conference on Computing & Machine Intelligence" 
+            organizer="College of Computer Sciences and IT" 
+            date="Apr 08 - 10, 2026" 
+            location="KFU Conference Center" 
           />
           <ActivityCard 
             type="Community Service" 
-            typeColor="bg-green-500/10 text-green-400 border border-green-500/20"
-            capacity="15/30" 
-            icon="🌳" 
-            title="Community Cleanup Volunteer Day" 
-            organizer="Community Center" 
-            date="Mar 18, 2026" 
-            location="Central Park" 
-          />
-          <ActivityCard 
-            type="Networking" 
-            typeColor="bg-purple-500/10 text-purple-400 border border-purple-500/20"
-            capacity="100/200" 
-            icon="💼" 
-            title="Career Fair 2026" 
-            organizer="University" 
-            date="Mar 25, 2026" 
-            location="Student Union Hall" 
+            typeColor="bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/20"
+            capacity="45/100" 
+            icon="🌴" 
+            title="Al-Ahsa Oasis Environmental Cleanup" 
+            organizer="National Center for Vegetation Cover" 
+            date="Apr 15, 2026" 
+            location="Al-Ahsa National Park" 
           />
         </div>
+
       </div>
     </div>
   );
