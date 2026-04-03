@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const Dashboard = ({ userName = "Hassan" }) => {
   return (
     
-    <div className="p-8 max-w-7xl mx-auto space-y-8 animate-in fade-in duration-500">
+    <div className="p-4 sm:p-6 md-p8 max-w-7xl mx-auto space-y-8 animate-in fade-in duration-500">
       <div>
         <h2 className="text-3xl font-bold dark:text-white">
           Welcome back, <span className="text-blue-500">{userName}!</span>

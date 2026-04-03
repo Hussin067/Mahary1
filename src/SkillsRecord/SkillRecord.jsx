@@ -16,10 +16,10 @@ const SkillRecord = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-8 animate-in fade-in duration-500">
+    <div className="p-4 sm:p-6 md:p-8  max-w-7xl mx-auto space-y-8 animate-in fade-in duration-500">
       
-      {/* Page Header */}
-      <div className="flex justify-between items-center">
+      
+      <div className="flex justify-between items-center flex-col md:flex-row md:items-center">
         <div>
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Skills Record</h2>
           <p className="text-gray-500 dark:text-gray-400 mt-1">Track and showcase your abilities</p>

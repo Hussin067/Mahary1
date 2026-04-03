@@ -72,7 +72,7 @@ const Opportunities = () => {
   ];
 
   return (
-    <div className="p-8 max-w-5xl mx-auto space-y-6 animate-in fade-in duration-500">
+    <div className="p-4 sm:p-6 md:p-8 max-w-5xl mx-auto space-y-6 animate-in fade-in duration-500">
       
       <div className="flex flex-col md:flex-row gap-4 justify-between md:items-center">
         <div className="relative flex-1">
