@@ -62,7 +62,7 @@ const KfuPointsGuide = () => {
       <div className="p-6 border-b border-gray-200 dark:border-white/5 bg-slate-50 dark:bg-white/5 flex items-center gap-3">
         <Award className="text-blue-500" size={24} />
         <div>
-          <h3 className="text-lg font-bold text-slate-900 dark:text-white">KFU Points Guide (دليل النقاط)</h3>
+          <h3 className="text-lg font-bold text-slate-900 dark:text-white">KFU Points Guide</h3>
           <p className="text-sm text-gray-500 dark:text-gray-400">Official scoring system for the KFU Skills Record</p>
         </div>
       </div>
