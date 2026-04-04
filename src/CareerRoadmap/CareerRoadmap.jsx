@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import { Target, CheckCircle, TrendingUp } from 'lucide-react';
+import { Target, CheckCircle, TrendingUp, PlusCircle } from 'lucide-react';
 import GoalCard from './GoalCard';
 import AddGoalModal from './AddGoalModal'; 
 
@@ -45,8 +45,8 @@ const CareerRoadmap = () => {
         </div>
         <button 
           onClick={() => setIsAddGoalModalOpen(true)}
-          className="bg-foreground text-background px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300">
-          + Add New Goal
+          className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-95 shadow-md shadow-blue-500/20">
+          <PlusCircle size={18} /> Add New Goal
         </button>
       </div>
 
