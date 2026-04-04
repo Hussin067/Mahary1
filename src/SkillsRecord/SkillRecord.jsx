@@ -5,7 +5,7 @@ import AddSkillModal from './AddSkillModel';
 import RequestPointsModal from './RequestPointsModal';
 import KfuPointsGuide from './KfuPointsGuide';
 import PointsHistory from './PointsHistory';
-import { Search, BookOpen, Award } from 'lucide-react';
+import { Search, BookOpen, Award, PlusCircle } from 'lucide-react';
 
 const SkillRecord = () => {
   const mySkills = [
@@ -29,11 +29,6 @@ const SkillRecord = () => {
           <h2 className="text-3xl font-bold text-foreground">Skills Record</h2>
           <p className="text-muted-foreground mt-1">Track and showcase your abilities</p>
         </div>
-        <button 
-          onClick={() => setIsModalOpen(true)}
-          className="bg-foreground text-background px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300">
-          + Add New Skill
-        </button>
       </div>
 
       <GeneralCard />
@@ -68,9 +63,16 @@ const SkillRecord = () => {
       {activeTab === 'portfolio' && (
         <div className="mt-6 space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-300">
           
-          <div className="pt-4 pb-2 border-b border-border">
-            <h3 className="text-lg font-bold text-foreground">Your Skills Portfolio</h3>
-            <p className="text-sm text-muted-foreground mt-1">{mySkills.length} skills found</p>
+          <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 pt-4 pb-2 border-b border-border">
+            <div>
+              <h3 className="text-lg font-bold text-foreground">Your Skills Portfolio</h3>
+              <p className="text-sm text-muted-foreground mt-1">{mySkills.length} skills found</p>
+            </div>
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-95 shadow-md shadow-blue-500/20">
+              <PlusCircle size={18} /> Add New Skill
+            </button>
           </div>
 
           <div className="space-y-4">
